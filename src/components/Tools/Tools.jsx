@@ -15,33 +15,39 @@ const Tools = () => {
                 <div className="grid-container text-center">
 
                     <div>
-                        <ToolCard
-                            image={promptTool}
-                            title="Prompt Tool"
-                            description="This AI powered tool allows you to utilize the power of prompts"
-                            link="http://naga.alphacrc.com:5277"
-                            linkText="Go"
-                        />
+                        <a href="http://naga.alphacrc.com:5277">
+                            <ToolCard
+                                image={promptTool}
+                                title="Prompt Tool"
+                                description="This AI powered tool allows you to utilize the power of prompts"
+                                link="http://naga.alphacrc.com:5277"
+                                linkText="Go"
+                            />
+                        </a>
                     </div>
 
                     <div>
-                        <ToolCard
-                            image={contentEditor}
-                            title="Content Editor"
-                            description="Improve content within seconds with the help of AI"
-                            link="http://naga.alphacrc.com:5288"
-                            linkText="Go"
-                        />
+                        <a href="http://naga.alphacrc.com:5288">
+                            <ToolCard
+                                image={contentEditor}
+                                title="Content Editor"
+                                description="Improve content within seconds with the help of AI"
+                                link="http://naga.alphacrc.com:5288"
+                                linkText="Go"
+                            />
+                        </a>
                     </div>
 
                     <div>
-                        <ToolCard
-                            image={humourResponder}
-                            title="Humourous Responder"
-                            description="The Finetuned AI that responds to everything with humour"
-                            link="http://naga.alphacrc.com:5053"
-                            linkText="Go"
-                        />
+                        <a href="http://naga.alphacrc.com:5053">
+                            <ToolCard
+                                image={humourResponder}
+                                title="Humourous Responder"
+                                description="The Finetuned AI that responds to everything with humour"
+                                link="http://naga.alphacrc.com:5053"
+                                linkText="Go"
+                            />
+                        </a>
                     </div>
 
                     <div>
@@ -49,8 +55,9 @@ const Tools = () => {
                             image={planner}
                             title="Work Allocation Planner"
                             description="Individual and Team availability easy visualisation tool"
-                            link="http://naga.alphacrc.com:5008/"
-                            linkText="Prototype View"
+                            // link="http://naga.alphacrc.com:5008/"
+                            link='#'
+                            linkText="Prototype coming soon"
                         />
                     </div>
 
