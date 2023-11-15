@@ -3,16 +3,28 @@ import './Tools.css';
 import ToolCard from '../ToolCard/ToolCard';
 import promptTool from './prompt_tool.png';
 import planner from './planner.png';
-import supportAssist from './supportAssistant.png';
 import contentEditor from './content_editor.gif';
 import humourResponder from './humour_responder.gif';
+import alphai from './alphai.png';
 
 const Tools = () => {
-    return(
+    return (
         <section id="tools">
             <div>
                 <h1 className="display-6">Tools</h1>
                 <div className="grid-container text-center">
+
+                    <div>
+                        <a href="http://naga.alphacrc.com:5001/alphai/">
+                            <ToolCard
+                                image={alphai}
+                                title="Alphai"
+                                description="AI assistant at Alpha, happy to assist you with your queries"
+                                link="http://naga.alphacrc.com:5001/alphai/"
+                                linkText="Go"
+                            />
+                        </a>
+                    </div>
 
                     <div>
                         <a href="http://naga.alphacrc.com:5277">
@@ -58,16 +70,6 @@ const Tools = () => {
                             // link="http://naga.alphacrc.com:5008/"
                             link='#'
                             linkText="Prototype coming soon"
-                        />
-                    </div>
-
-                    <div>
-                        <ToolCard
-                            image={supportAssist}
-                            title="Support Assistant"
-                            description="Interactive support chat assistant for memoQ troubleshooting"
-                            link="#"
-                            linkText="Coming Soon"
                         />
                     </div>
 
