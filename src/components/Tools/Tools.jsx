@@ -63,14 +63,15 @@ const Tools = () => {
                     </div>
 
                     <div>
-                        <ToolCard
-                            image={planner}
-                            title="Work Allocation Planner"
-                            description="Individual and Team availability easy visualisation tool"
-                            // link="http://naga.alphacrc.com:5008/"
-                            link='#'
-                            linkText="Prototype coming soon"
-                        />
+                        <a href="http://naga.alphacrc.com:5008/">
+                            <ToolCard
+                                image={planner}
+                                title="Work Allocation Planner"
+                                description="Individual and Team availability easy visualisation tool"
+                                link="http://naga.alphacrc.com:5008/"
+                                linkText="See Prototype"
+                            />
+                        </a>
                     </div>
 
                 </div>
