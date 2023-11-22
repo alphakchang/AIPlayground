@@ -8,6 +8,9 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
+
+  const proxy = 'https://naga.alphacrc.com';
+
   return (
     <div>
       <div className="back">
@@ -16,7 +19,7 @@ function App() {
       <Navigation />
       <div className="container-lg">
         <About />
-        <Tools />
+        <Tools proxy={proxy}/>
       </div>
       <Footer />
     </div>
