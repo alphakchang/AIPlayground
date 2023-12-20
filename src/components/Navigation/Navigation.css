@@ -10,14 +10,14 @@
     color: #FFFAF8;
 }
 
-.nav-item a {
+.text-links a {
     padding-left: 1em;
     padding-right: 1em;
     color: #FFFAF8;
     transition: 0.1s;
 }
 
-.nav-item a:hover {
+.text-links a:hover {
     color: #2E314F;
     /* font-size: 1.2em; */
     background-color: #FFFAF8;

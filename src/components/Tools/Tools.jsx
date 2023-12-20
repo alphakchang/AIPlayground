@@ -15,7 +15,7 @@ import lilisamo from './lilisamo.png';
 const Tools = ({ proxy }) => {
     return (
         <>
-            <section id="prompting-tools">
+            <section id="prompting">
                 <div>
                     <h1 className="display-6">Prompting related</h1>
                     <div className="grid-container text-center">
@@ -111,7 +111,7 @@ const Tools = ({ proxy }) => {
                 </div>
             </section>
 
-            <section id='fine-tuned'>
+            <section id='ft'>
                 <div>
                     <h1 className="display-6">Fine-tuned models</h1>
                     <div className="grid-container text-center">
@@ -155,7 +155,7 @@ const Tools = ({ proxy }) => {
                 </div>
             </section>
 
-            <section id='others'>
+            <section id='other'>
                 <div>
                     <h1 className="display-6">Others</h1>
                     <div className="grid-container text-center">

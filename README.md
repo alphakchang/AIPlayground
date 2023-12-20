@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Alpha AI Playground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Alpha AI Playground incorporates a variety of tools that were developed within Alpha. These tools utilize elements of machine learning and generative AI.
+
+The latest AI related technology is constantly being researched and new tools will be added to the playground.
+
+## How to use
+
+Alpha AI Playground has several categories and expanding, use the dropdown located at the top of the page to select the category and see the available apps in that category.
+
+# See below for developer notes
 
 ## Available Scripts
 
@@ -14,11 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -27,44 +30,28 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+Once the build process is done, copy the build folder into the following location on Naga, replacing the existing build folder. (or delete the exsiting one first for a cleaner action)
+C:\AI_Playground\AI_Playground
+
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Serve options
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `serve from server` (this is my current way)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Using express.static() to serve the static file, this is the code block inside the server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```javascript
+const buildPathAIPlayground = path.join(__dirname, './build');
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+app.use('/', express.static(buildPathAIPlayground));
 
-## Learn More
+app.get('/*', (req, res) => {
+	res.sendFile(path.join(buildPathAIPlayground, 'index.html'));
+});
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `serve -s build -l ${port}`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Once the build folder has been created, it contains everything required to be hosted.
+Navigate to where the build folder is located, then use the command `serve -s build` to host it, port can be configured by adding `-l` or `-listen` followed by the port number.

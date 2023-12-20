@@ -4,6 +4,7 @@ import BackgroundParticles from './components/BackgroundParticles/BackgroundPart
 import Navigation from './components/Navigation/Navigation';
 import About from './components/About/About';
 import Tools from './components/Tools/Tools';
+import AboutIdeas from './components/AboutIdeas/Aboutideas';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
@@ -20,6 +21,7 @@ function App() {
       <div className="container-lg">
         <About />
         <Tools proxy={proxy}/>
+        <AboutIdeas />
       </div>
       <Footer />
     </div>
